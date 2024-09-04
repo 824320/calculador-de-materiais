@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Materiais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calculadora de Materiais</h1>
+  <div class="container">
+    <section id="como-funciona">
+      <h2>Como funciona?</h2>
+      <p>Esta calculadora de materiais é uma ferramenta simples e fácil de usar que ajuda a calcular a quantidade de materiais necessários para uma obra. Basta selecionar o tipo de material ou estrutura que você deseja calcular, inserir as dimensões necessárias e clicar no botão "Calcular".</p>
+      <p>A calculadora irá fornecer a quantidade necessária de materiais com base nas dimensões fornecidas. É importante notar que os cálculos são baseados em fórmulas padrão e podem variar dependendo do tipo de material ou estrutura específica.</p>
+      <h2>Atenção:</h2>
+      <p> Para a (Calculadora de Volume de concreto) quando a estrutura selecionado for "broca", o lado C nao será considerado, quando for "viga baldrame" o lada C sera considerado como metro linear e quando for "laje" somente o lado C será considerado em centimetros,  as demais estruturas deverão  ser passadas em centimetros, onde (1 metro é igual a 100cm). </p>
+    </section>
+    <form id="formulario">
+      <h2>Calculadora de Quantidade de Materiais</h2>
+      <label for="tipoMaterial">Tipo de Material:</label>
+      <select id="tipoMaterial">
+        <option value="">Selecione um material</option>
+        <option value="tijolo de 6 furos">Tijolo de 6 furos</option>
+        <option value="bloco de concreto">Bloco de concreto</option>
+        <option value="tijolo de 8 furos">Tijolo de 8 furos</option>
+        <option value="tijolo maciço rústico">Tijolo maciço rústico</option>
+      </select>
+      <label for="comprimento">Metragem (M²):</label>
+      <input type="number" id="comprimento" required>
+      <button type="submit">Calcular</button>
+      <div id="resultado"></div>
+    </form>
+    <form id="formulario2">
+      <h2>Calculadora de Volume de Concreto</h2>
+      <label for="tipotipoEstrutura">Tipo de Estrutura:</label>
+      <select id="tipotipoEstrutura">
+        <option value="">Selecione uma estrutura</option>
+        <option value="viga">Viga</option>
+        <option value="viga baldrame">Viga baldrame</option>
+        <option value="coluna">Coluna</option>
+        <option value="broca">Broca</option>
+        <option value="laje">Laje</option>
+      </select>
+      <label for="ladoA">Lado A (cm):</label>
+      <input type="number" id="ladoA" required>
+      <label for="ladoB">Lado B (cm):</label>
+      <input type="number" id="ladoB" required>
+      <label for="ladoC">Lado C (cm):</label>
+      <input type="number" id="ladoC" required>
+      <button type="submit">Calcular</button>
+      <div id="resultado2"></div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
